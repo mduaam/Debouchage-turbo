@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+.why-slant-panel {
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
+
+@media (max-width: 1023px) {
+  .why-slant-panel {
+    clip-path: none;
+  }
+}
